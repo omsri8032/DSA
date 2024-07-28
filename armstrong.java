@@ -32,8 +32,4 @@ return f;
 
 
 }
-// boolean isarmstrong(int digits)
-// {
-
-// }
 }

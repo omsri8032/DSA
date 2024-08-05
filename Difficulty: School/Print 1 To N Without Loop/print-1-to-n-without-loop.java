@@ -52,8 +52,7 @@ class Solution
         if(i>N)
         return;
         System.out.print(i+" ");
-        i++;
-        r(i,N);
+        r(i+1,N);
     }
 }
 

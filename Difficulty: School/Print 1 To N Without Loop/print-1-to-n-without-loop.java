@@ -45,14 +45,14 @@ class Solution
     
   public void printNos(int N)
     {
-        r(1,N);
+    r(1,N);
     }
-    void r(int i,int N)
+    void r(int i,int n)
     {
-        if(i>N)
+        if(i>n)
         return;
         System.out.print(i+" ");
-        r(i+1,N);
+        r(i+1,n);
     }
 }
 

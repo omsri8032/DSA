@@ -29,7 +29,9 @@ class Sorting
 			 printArray(a,n);
 			
 		t--;
-		}
+		
+System.out.println("~");
+}
 		
 	}
 }
@@ -40,25 +42,50 @@ class Solution
 {
   static void insert(int arr[],int i)
   {
-       
+       // Your code here
   }
   //Function to sort the array using insertion sort algorithm.
   public void insertionSort(int arr[], int n)
   {
-      
-        for(int i=0;i<arr.length;i++)
+      sort(arr,0,0);
+  }
+        static void sort(int a[],int i,int  j)
+    {
+        if(i>=a.length)
         {
-            int ele=arr[i];
-            for(int j=0;j<=i;j++)
+            return;
+        }
+        if(j==0)
+        {
+            sort(a,i+1,i+1);
+            return;
+        }
+        if(a[j]<a[j-1])
+        {
+            int temp;
+            temp=a[j];
+            a[j]=a[j-1];
+            a[j-1]=temp;
+            sort(a,i,j-1);
+        }
+        else
+        {
+            sort(a,i,j-1);
+        }
+
+        /*for(int i=0;i<a.length;i++)
+        {
+            for(int j=i;j>0;j--)
             {
-                if(ele<arr[j])
+                if(a[j]<a[j-1])
                 {
                     int temp;
-                    temp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=temp;
+                    temp=a[j];
+                    a[j]=a[j-1];
+                    a[j-1]=temp;
                 }
             }
-        }
+        }*/
+    
   }
 }
